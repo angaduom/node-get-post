@@ -1,0 +1,21 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+</head>
+<body>
+TWEET
+  <input type="text" id="tweet-content"></input>
+  <button id="tweet">TWEET</button>
+  <script>
+    $(function() {
+      console.log("This is Jquery");
+      $('#tweet').click(function() {
+        var content=document.getElementById('tweet-content').value;
+        $.post("/tweet", {"id":1,"content":content}, function(data) {
+            console.log(data);
+        });
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+</head>
+<body>
+  HEY ALL!
+  <button id="get-data">GET DATA</button>
+  <script>
+    $(function() {
+      console.log("This is Jquery");
+      $('#get-data').click(function() {
+        $.get("/get-tweets", function(data, status) {
+            console.log(data,status);
+        });
+      })
+    })
+  </script>
+</body>
+</html>
